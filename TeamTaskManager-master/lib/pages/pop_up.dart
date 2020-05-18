@@ -87,6 +87,6 @@ class PopupState extends State<Popup> {
           ],
         ),
       )      
-      );
+    );
   }
 }
