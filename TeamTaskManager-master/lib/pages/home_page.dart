@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_login_demo/pages/pop_up.dart';
 import 'package:flutter_login_demo/services/authentication.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter_login_demo/models/todo.dart';
-import 'package:flutter_login_demo/pages/project.dart';
-import 'package:intl/intl.dart';
 import 'dart:async';
 
 class HomePage extends StatefulWidget {
@@ -259,40 +258,17 @@ class _HomePageState extends State<HomePage> {
         //         onPressed: signOut)
         //   ],
         // ),
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: <Widget>[
-              Padding(
-                padding: EdgeInsets.all(20.0),
-                child: Text(
-                  months[today.month-1]+" "+(today.day).toString(),
-                  textAlign: TextAlign.center, 
-                  style: 
-                    TextStyle(
-                      color: Colors.grey,
-                      fontSize: 32.0,
-                  ),
-                ),
-              ),
-              Center(
-                child: 
-                  RaisedButton(
-                    child: Text(months[today.month-1]+" "+(today.day).toString()),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => Project()),
-                      );
-                    },
-                  ),
-                ),
-              showTodoList(),
-          ],
-        ),
+        body: showTodoList(),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
-            showAddTodoDialog(context);
+         //   showAddTodoDialog(context);
+               Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: (context) {
+            return Popup();
+          },
+        ),
+      );
           },
           tooltip: 'Increment',
           child: Icon(Icons.add),
