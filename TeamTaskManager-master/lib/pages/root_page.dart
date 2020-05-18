@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_login_demo/pages/home.dart';
 import 'package:flutter_login_demo/pages/login_signup_page.dart';
 import 'package:flutter_login_demo/services/authentication.dart';
-import 'package:flutter_login_demo/pages/home_page.dart';
 
 enum AuthStatus {
   NOT_DETERMINED,

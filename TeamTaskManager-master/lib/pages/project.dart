@@ -1,13 +1,6 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_login_demo/models/todo.dart';
-import 'package:flutter_login_demo/pages/home_page.dart';
-import 'package:firebase_database/firebase_database.dart';
-import 'package:flutter_login_demo/services/authentication.dart';
-import 'package:intl/intl.dart';
-
-import 'login_signup_page.dart';
 
 var today = DateTime.now();
 
