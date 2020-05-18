@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_login_demo/pages/due.dart';
 import 'package:flutter_login_demo/pages/home_page.dart';
 
 class Popup extends StatefulWidget{
@@ -76,7 +77,7 @@ class PopupState extends State<Popup> {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => HomePage()),
+                          MaterialPageRoute(builder: (context) => Due()),
                         );
                       },
                     ),
