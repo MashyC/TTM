@@ -5,10 +5,6 @@ import 'package:flutter_login_demo/models/todo.dart';
 import 'package:flutter_login_demo/pages/home_page.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter_login_demo/services/authentication.dart';
-import 'package:intl/intl.dart';
-
-
-import 'login_signup_page.dart';
 
 class Home extends StatefulWidget {
     Home({Key key, this.auth, this.userId, this.logoutCallback})
@@ -30,8 +26,6 @@ class _HomeState extends State<Home> {
   final _textEditingController = TextEditingController();
   StreamSubscription<Event> _onTodoAddedSubscription;
   StreamSubscription<Event> _onTodoChangedSubscription;
-
-  var months = [];
 
   Query _todoQuery;
 @override
@@ -133,7 +127,7 @@ class _HomeState extends State<Home> {
               ),
               new Container(
                 color: Colors.lightGreen,
-                  child: LoginSignupPage(),
+            //    child: //insert page,
               ),
               new Container(
                 color: Colors.red,
