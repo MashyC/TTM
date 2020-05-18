@@ -3,6 +3,7 @@ import 'package:flutter_login_demo/services/authentication.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter_login_demo/models/todo.dart';
 import 'package:flutter_login_demo/pages/project.dart';
+import 'package:flutter_login_demo/pages/pop_up.dart';
 import 'package:intl/intl.dart';
 import 'dart:async';
 
@@ -292,7 +293,11 @@ class _HomePageState extends State<HomePage> {
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
-            showAddTodoDialog(context);
+            //showAddTodoDialog(context);
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Popup()),
+            );
           },
           tooltip: 'Increment',
           child: Icon(Icons.add),
