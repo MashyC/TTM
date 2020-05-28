@@ -10,7 +10,7 @@ class Due extends StatefulWidget{
   
   }
 
-  class DueState extends State<Due> {
+class DueState extends State<Due> {
   CalendarController _calendarController; 
   @override
 void initState() {
@@ -26,10 +26,14 @@ void dispose() {
 
 @override
 Widget build(BuildContext context) {
-  return TableCalendar(
-    calendarController: _calendarController,
+  return Scaffold(
+    appBar: AppBar(
+      title: Text("Add date"),
+    ),
+      body: TableCalendar(
+      calendarController: _calendarController,
+    ),
   );
 }
-
-  }
+ }
 
